@@ -4,11 +4,11 @@ code {
 }
 
 #introduction {
-  margin-top: 10%;
+  padding-top: 10%;
 }
 
-@media (min-width: 768px) {
-  #main-doc {
-    max-width: 90%;
+@media (max-width: 768px) {
+  #introduction {
+    padding-top: 10%;
   }
 }
