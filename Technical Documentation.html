@@ -1,0 +1,300 @@
+<html>
+
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="Styles.css">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <header>
+            <a class="navbar-brand" href="#">Machine Learning</a>
+          </header>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+          <li><a href="#Classification_of_machine_learning_tasks" class="nav-link">Classification of machine learning tasks</a></li>
+          <li><a href="#Coding_examples" class="nav-link">Coding examples</a></li>
+          <li><a href="#Languages_used" class="nav-link">Languages used</a></li>
+          <li><a href="#Maths_required" class="nav-link">Maths required</a></li>
+          <li><a href="#Steps_of_machine_learning" class="nav-link">Steps of machine learning</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </head>
+
+  <main id="main-doc" class="container-fluid">
+
+    <section class="main-section" id="Introduction">
+
+      <header>
+        <h1>Introduction</h1>
+      </header>
+
+      <p>
+        <strong>Machine learning</strong> is a subset of <strong>artificial intelligence</strong> in the field of computer science that often uses statistical techniques
+        to give computers the ability to "learn" (i.e., progressively improve performance on a specific task) with data,
+        <strong>without</strong> being <strong>explicitly programmed</strong>.
+      </p>
+
+      <p>
+        Machine learning is closely related to (and often overlaps with) computational statistics, which also focuses on prediction-making
+        through the use of computers. It has strong ties to mathematical optimization, which delivers methods, theory and application
+        domains to the field. Machine learning is sometimes conflated with data mining, where the latter subfield focuses more on
+        exploratory data analysis and is known as unsupervised learning. Machine learning can also be unsupervised
+        and be used to learn and establish baseline behavioral profiles for various entities and then used to find meaningful anomalies.
+      </p>
+
+    </section>
+
+    <section class="main-section" id="Classification_of_machine_learning_tasks">
+
+      <header>
+        <h1>Classification of machine learning tasks</h1>
+      </header>
+
+      <p>
+        Machine learning tasks are typically classified into two broad categories, depending on whether there is a learning "signal" or
+        "feedback" available to a learning system:
+      </p>
+
+      <ul>
+        <li><strong>Supervised Learning</strong></li>
+        <ul type="square">
+          <li>Semi Supervised Learning</li>
+          <li>Active Learning</li>
+          <li>Reinforcement Learning</li>
+        </ul>
+        <li><strong>Unsupervised Learning</strong></li>
+      </ul>
+
+    </section>
+
+    <section class="main-section" id="Coding_examples">
+
+      <header>
+        <h1>Coding examples</h1>
+      </header>
+
+      <p>
+        An in-depth study of machine learning syntax is beyond the scope of this document. However a few simple examples of machine learning using
+        are shown below:
+      </p>
+
+      <ul>
+
+        <li><strong>Linear Regression</strong></li>
+
+        <code>
+
+          #Import Library
+          #Import other necessary libraries like pandas, numpy...
+          from sklearn import linear_model
+          #Load Train and Test datasets
+          #Identify feature and response variable(s) and values must be numeric and numpy arrays
+          x_train=input_variables_values_training_datasets
+          y_train=target_variables_values_training_datasets
+          x_test=input_variables_values_test_datasets
+          # Create linear regression object
+          linear = linear_model.LinearRegression()
+          # Train the model using the training sets and check score
+          linear.fit(x_train, y_train)
+          linear.score(x_train, y_train)
+          #Equation coefficient and Intercept
+          print('Coefficient: \n', linear.coef_)
+          print('Intercept: \n', linear.intercept_)
+          #Predict Output
+          predicted= linear.predict(x_test)
+
+        </code>
+
+        <li><strong>Logistic Regression</strong></li>
+
+        <code>
+
+          #Import Library
+          from sklearn.linear_model import LogisticRegression
+          #Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
+          # Create logistic regression object
+          model = LogisticRegression()
+          # Train the model using the training sets and check score
+          model.fit(X, y)
+          model.score(X, y)
+          #Equation coefficient and Intercept
+          print('Coefficient: \n', model.coef_)
+          print('Intercept: \n', model.intercept_)
+          #Predict Output
+          predicted= model.predict(x_test)
+
+        </code>
+
+        <li><strong>Decision Tree</strong></li>
+
+        <code>
+          #Import Library
+          #Import other necessary libraries like pandas, numpy...
+          from sklearn import tree
+          #Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
+          # Create tree object
+          model = tree.DecisionTreeClassifier(criterion='gini') # for classification, here you can change the algorithm as gini or entropy (information gain) by default it is gini
+          # model = tree.DecisionTreeRegressor() for regression
+          # Train the model using the training sets and check score
+          model.fit(X, y)
+          model.score(X, y)
+          #Predict Output
+          predicted= model.predict(x_test)
+        </code>
+
+        <li><strong>Support Vector Machine (SVM)</strong></li>
+
+        <code>
+          #Import Library
+          from sklearn import svm
+          #Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
+          # Create SVM classification object
+          model = svm.svc() # there is various option associated with it, this is simple for classification. You can refer link, for mo# re detail.
+          # Train the model using the training sets and check score
+          model.fit(X, y)
+          model.score(X, y)
+          #Predict Output
+          predicted= model.predict(x_test)
+        </code>
+
+        <li><strong>Naive Bayes</strong></li>
+
+        <code>
+          #Import Library
+          from sklearn.naive_bayes import GaussianNB
+          #Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
+          # Create SVM classification object model = GaussianNB() # there is other distribution for multinomial classes like Bernoulli Naive Bayes, Refer link
+          # Train the model using the training sets and check score
+          model.fit(X, y)
+          #Predict Output
+          predicted= model.predict(x_test)
+        </code>
+
+      </ul>
+
+    </section>
+
+    <section class="main-section" id="Languages_used">
+
+      <header>
+        <h1>Languages used</h1>
+      </header>
+
+      <p>Artificial intelligence researchers have developed several specialized programming languages for artificial intelligence:</p>
+
+      <ul>
+
+        <li>
+          <strong>Python</strong> is widely used for artificial intelligence, with packages for a number of applications including General AI,
+          Machine Learning, Natural Language Processing and Neural Networks.
+        </li>
+        <li>
+          <strong>R</strong> is widely used in new-style artificial intelligence, involving statistical computations, numerical analysis,
+          the use of Bayesian inference, neural networks and in general Machine Learning. In domains like finance, biology,
+          sociology or medicine it is considered as one of the main standard language.
+        </li>
+        <li>
+          <strong>Lisp</strong> is a practical mathematical notation for computer programs based on lambda calculus. Linked lists are one of the
+          Lisp language's major data structures, and Lisp source code is itself made up of lists.
+          There are many dialects of Lisp in use today, among which are Common Lisp, Scheme, and Clojure.
+        </li>
+        <li>
+          <strong>Haskell</strong> is also a very good programming language for AI. Lazy evaluation and the list and LogicT monads make it easy to express
+          non-deterministic algorithms, which is often the case. Infinite data structures are great for search trees. The
+          language's features enable a compositional way of expressing the algorithms. The only drawback is that working with graphs
+          is a bit harder at first because of purity.
+        </li>
+      </ul>
+      <p>Some other languages used for machine learning are:
+      <ul>
+        <li>C++</li>
+        <li>Perl</li>
+        <li>MATLAB</li>
+        <li>Prolog</li>
+        <li>Julia</li>
+      </ul>
+
+    </section>
+
+    <section class="main-section" id="Maths_required">
+
+      <header><h1>Maths required</h1></header>
+
+      <p>
+        The foremost question when trying to understand a field such as Machine Learning is the amount of maths necessary and the complexity of maths required to
+        understand these systems.
+      </p>
+
+      <p>
+        The answer to this question is multidimensional and depends on the level and interest of the individual.
+      </p>
+
+      <p>
+        Here is the minimum level of mathematics that is needed for Machine Learning Engineers / Data Scientists.
+      </p>
+
+      <ol>
+
+        <li><strong>Linear Algebra</strong> (Matrix Operations, Projections, Factorisation, Symmetric Matrices, Orthogonalisation)</li>
+        <li><strong>Probability Theory and Statistics</strong> (Probability Rules & Axioms, Bayes’ Theorem, Random Variables, Variance and Expectation, Conditional and Joint
+          Distributions, Standard Distributions.)</li>
+        <li><strong>Calculus</strong> (Differential and Integral Calculus, Partial Derivatives)</li>
+        <li><strong>Algorithms and Complex Optimisations</strong> (Binary Trees, Hashing, Heap, Stack)</li>
+      </ol>
+
+    </section>
+
+    <section class="main-section" id="Steps_of_machine_learning">
+
+      <header><h1>Steps of machine learning</h1></header>
+
+      <p>There are five basic steps of machine learning:</p>
+
+      <ol>
+
+        <li>
+          <strong>Collecting data:</strong> <br>Be it the raw data from excel, access, text files etc., this step (gathering past data) forms the
+          foundation of the future learning. The better the variety, density and volume of relevant data, better the
+          learning prospects for the machine becomes.
+        </li>
+        <li>
+          <strong>Preparing the data:</strong> <br>Any analytical process thrives on the quality of the data used. One needs to spend time determining the
+          quality of data and then taking steps for fixing issues such as missing data and treatment of outliers.
+          Exploratory analysis is perhaps one method to study the nuances of the data in details thereby burgeoning the nutritional
+          content of the data.
+        </li>
+        <li>
+          <strong>Training a model:</strong> <br>This step involves choosing the appropriate algorithm and representation of data in the form of the model.
+          The cleaned data is split into two parts – train and test (proportion depending on the prerequisites); the first part
+          (training data) is used for developing the model. The second part (test data), is used as a reference.
+        </li>
+        <li>
+          <strong>Evaluating the model:</strong> <br>To test the accuracy, the second part of the data (holdout / test data) is used. This step determines the
+          precision in the choice of the algorithm based on the outcome. A better test to check accuracy of model is to see its performance
+          on data which was not used at all during model build.
+        </li>
+        <li>
+          <strong>Improving the performance:</strong> <br>This step might involve choosing a different model altogether or introducing more variables to
+          augment the efficiency. That’s why significant amount of time needs to be spent in data collection and preparation.
+        </li>
+
+
+      </ol>
+
+    </section>
+
+    <footer id="reference">
+      <h1>Reference</h1>
+      <p>All of the documentation in this page is taken from <a id="wikipedia-link" href="https://en.wikipedia.org/wiki/Machine_learning">wikipedia</a> and
+        <a id="towards-data-science-link" href="https://towardsdatascience.com/introduction-to-machine-learning-db7c668822c4">towardsdatascience.com</a></p>
+    </footer>
+
+  </main>
+
+</html>

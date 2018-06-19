@@ -1,0 +1,14 @@
+code {
+  display: block;
+  white-space: pre-wrap;
+}
+
+#introduction {
+  margin-top: 10%;
+}
+
+@media (min-width: 768px) {
+  #main-doc {
+    max-width: 90%;
+  }
+}
