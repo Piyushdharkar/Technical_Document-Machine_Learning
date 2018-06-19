@@ -4,10 +4,10 @@ code {
 }
 
 #introduction {
-  padding-top: 10%;
+  padding-top: 30%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   #introduction {
     padding-top: 10%;
   }
