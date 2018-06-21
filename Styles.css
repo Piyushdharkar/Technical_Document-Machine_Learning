@@ -7,16 +7,16 @@ code {
   padding-top: 30%;
 }
 
-#main-doc {
-  font-size: 4vw;
+p, code, li {
+  font-size: 2vw;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   #introduction {
     padding-top: 10%;
   }
 
-  #main-doc {
+  p {
     font-size: 2vw;
   }
 }
