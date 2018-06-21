@@ -8,7 +8,7 @@ code {
 }
 
 #main-doc {
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 @media (min-width: 768px) {
@@ -17,6 +17,6 @@ code {
   }
 
   #main-doc {
-    font-size: 100%;
+    font-size: 2vw;
   }
 }
