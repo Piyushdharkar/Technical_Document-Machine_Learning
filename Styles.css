@@ -4,7 +4,7 @@ code {
 }
 
 #introduction {
-  padding-top: 30%;
+  padding-top: 90%;
 }
 
 .main-section p, .main-section li, #reference p{
@@ -17,6 +17,10 @@ code {
 
 .main-section h1, #reference h1 {
   font-size: 6em;
+}
+
+#nav-bar {
+
 }
 
 @media (min-width: 1080px) {
