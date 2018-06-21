@@ -7,8 +7,16 @@ code {
   padding-top: 30%;
 }
 
+#main-doc {
+  font-size: 3vw;
+}
+
 @media (min-width: 768px) {
   #introduction {
     padding-top: 10%;
+  }
+
+  #main-doc {
+    font-size: 100%;
   }
 }
