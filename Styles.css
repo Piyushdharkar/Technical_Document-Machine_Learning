@@ -7,8 +7,32 @@ code {
   padding-top: 30%;
 }
 
-@media (min-width: 768px) {
+.main-section p, .main-section li, #reference p{
+  font-size: 3em;
+}
+
+.main-section code {
+  font-size: 2.2em;
+}
+
+.main-section h1, #reference h1 {
+  font-size: 6em;
+}
+
+@media (min-width: 1080px) {
   #introduction {
     padding-top: 10%;
+  }
+
+  .main-section p, .main-section li, #reference p{
+    font-size: 1em;
+  }
+
+  .main-section code {
+    font-size: 1em;
+  }
+
+  .main-section h1, #reference h1 {
+    font-size: 2em;
   }
 }
