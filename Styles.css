@@ -7,16 +7,8 @@ code {
   padding-top: 30%;
 }
 
-p, code, li {
-  font-size: 2vw;
-}
-
-@media (min-width: 1080px) {
+@media (min-width: 768px) {
   #introduction {
     padding-top: 10%;
-  }
-
-  p {
-    font-size: 2vw;
   }
 }
